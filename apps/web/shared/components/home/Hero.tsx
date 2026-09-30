@@ -6,17 +6,11 @@ const ACCENT_GREEN = "#1F8707";
 
 export function Hero() {
   return (
-    <section
-      className="sc-hero w-full bg-[#000B3D] text-white"
-      aria-labelledby="hero-heading"
-    >
+    <section className="sc-hero w-full bg-[#000B3D] text-white" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-[1180px] px-[clamp(20px,5vw,56px)] pt-[clamp(64px,10vw,120px)] pb-[clamp(72px,10vw,120px)]">
         <div className="sc-hero-grid grid grid-cols-1 items-center gap-[clamp(32px,6vw,64px)] min-[761px]:grid-cols-[1.1fr_0.9fr]">
           <div className="relative z-10 flex flex-col gap-6">
-            <span
-              className="sc-hero-in text-[13px] font-bold uppercase tracking-[0.16em]"
-              style={{ animationDelay: "0.05s", color: ACCENT_GREEN }}
-            >
+            <span className="sc-hero-in text-[13px] font-bold uppercase tracking-[0.16em]" style={{ animationDelay: "0.05s", color: ACCENT_GREEN }}>
               SharkCare Foundation
             </span>
             <h1
@@ -32,13 +26,10 @@ export function Hero() {
               className="sc-hero-in max-w-[480px] text-[clamp(16px,1.6vw,19px)] leading-relaxed text-[rgba(245,245,242,0.78)]"
               style={{ animationDelay: "0.28s" }}
             >
-              The corporate social responsibility initiative of the Shark Group of Companies, uniting
-              SharkStack and SharkScale to support people and communities where help is needed most.
+              The corporate social responsibility initiative of the Shark Group of Companies, uniting SharkStack and SharkScale to support people and
+              communities where help is needed most.
             </p>
-            <div
-              className="sc-hero-in flex flex-wrap gap-3.5 pt-2"
-              style={{ animationDelay: "0.4s" }}
-            >
+            <div className="sc-hero-in flex flex-wrap gap-3.5 pt-2" style={{ animationDelay: "0.4s" }}>
               <Link
                 href="#gallery"
                 className="sc-cta sc-cta-solid inline-block rounded-full px-[26px] py-3.5 text-[15px] font-semibold text-white"

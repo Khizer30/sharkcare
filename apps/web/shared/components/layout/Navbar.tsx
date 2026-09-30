@@ -12,16 +12,9 @@ const navLinks = [
 
 export function Navbar() {
   return (
-    <header
-      className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#000B3D] text-white"
-      role="banner"
-    >
+    <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#000B3D] text-white" role="banner">
       <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-5 px-[clamp(20px,5vw,56px)] py-3.5">
-        <Link
-          href="#top"
-          className="flex items-center gap-2.5"
-          aria-label="SharkCare Foundation, back to top"
-        >
+        <Link href="#top" className="flex items-center gap-2.5" aria-label="SharkCare Foundation, back to top">
           <span className="sc-image-hover shrink-0 rounded-md">
             <Image
               src={logo}
@@ -35,10 +28,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav
-          className="flex items-center gap-[clamp(16px,3vw,32px)]"
-          aria-label="Primary"
-        >
+        <nav className="flex items-center gap-[clamp(16px,3vw,32px)]" aria-label="Primary">
           {navLinks.map(({ href, label }) => (
             <Link key={href} href={href} className="sc-nav-link hidden sm:inline-block">
               {label}
