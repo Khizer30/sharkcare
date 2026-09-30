@@ -16,7 +16,7 @@ import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
     }),
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: ".env"
+      envFilePath: [".env", "../../.env"]
     }),
     ScheduleModule.forRoot({}),
     JWTModule,

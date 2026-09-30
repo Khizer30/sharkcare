@@ -1,4 +1,4 @@
-# Turbo Monorepo
+# SharkCare
 
 A full-stack monorepo built with [Turborepo](https://turbo.build/repo), featuring a NestJS API and a Next.JS web app with shared DTOs.
 
@@ -23,7 +23,7 @@ A full-stack monorepo built with [Turborepo](https://turbo.build/repo), featurin
 ## Repository Structure
 
 ```
-turbo/
+sharkcare/
 ├── apps/
 │   ├── api/                # NestJS backend (DDD)
 │   │   └── src/
@@ -78,10 +78,7 @@ Zod schemas live in `packages/dtos/src` and are consumed by both the NestJS back
 
 ## Environment Variables
 
-See the example files for all required variables:
-
-- [`apps/api/.env.example`](apps/api/.env.example)
-- [`apps/web/.env.example`](apps/web/.env.example)
+Copy [`.env.example`](.env.example) to `.env` at the repository root and fill in the values.
 
 ---
 

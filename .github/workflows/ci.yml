@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [24]
+        node-version: [26]
 
     steps:
       - name: Checkout Repository
@@ -29,14 +29,6 @@ jobs:
 
       - name: Install Root Dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Create .env files
-        env:
-          WEB_ENV_FILE: ${{ secrets.WEB_ENV_FILE }}
-          API_ENV_FILE: ${{ secrets.API_ENV_FILE }}
-        run: |
-          printf "%s" "$WEB_ENV_FILE" > apps/web/.env
-          printf "%s" "$API_ENV_FILE" > apps/api/.env
 
       - name: Lint Check
         run: pnpm lint

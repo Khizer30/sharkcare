@@ -1,12 +1,12 @@
 services:
   api:
-    container_name: turbo-server
-    image: khizer30/turbo-server:latest
+    container_name: sharkcare-server
+    image: khizer30/sharkcare-server:latest
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
     env_file:
-      - apps/api/.env.production
+      - .env
     restart: unless-stopped
