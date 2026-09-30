@@ -1,9 +1,9 @@
 import path from "node:path";
-import { loadEnvConfig } from "@next/env";
+import { config as loadEnv } from "dotenv";
 import type { NextConfig } from "next";
 
-loadEnvConfig(path.resolve(__dirname, "../.."));
-loadEnvConfig(path.resolve(__dirname));
+loadEnv({ path: path.resolve(__dirname, "../../.env") });
+loadEnv({ path: path.resolve(__dirname, ".env") });
 
 const nextConfig: NextConfig = {};
 
