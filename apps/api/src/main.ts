@@ -6,11 +6,16 @@ import { type NestExpressApplication } from "@nestjs/platform-express";
 import { AppModule } from "@src/app.module";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
+import { Logger } from "nestjs-pino";
 import { ZodValidationPipe } from "nestjs-zod";
 
 // Bootstrap
 (async (): Promise<undefined> => {
-  const app: NestExpressApplication = await NestFactory.create<NestExpressApplication>(AppModule);
+  const app: NestExpressApplication = await NestFactory.create<NestExpressApplication>(AppModule, {
+    bufferLogs: true
+  });
+
+  app.useLogger(app.get(Logger));
 
   const configService = app.get(ConfigService);
   const port = configService.get<number>("PORT", 5000);
@@ -25,7 +30,6 @@ import { ZodValidationPipe } from "nestjs-zod";
     origin: isProduction && corsOrigins ? corsOrigins : "*",
     credentials: true
   });
-  app.useLogger(isProduction ? ["error", "warn"] : ["log", "error", "warn", "debug", "verbose"]);
   app.useGlobalPipes(new ZodValidationPipe());
   app.useGlobalInterceptors(new ResponseInterceptor());
   app.useGlobalFilters(new HttpExceptionFilter());
