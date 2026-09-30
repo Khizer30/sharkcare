@@ -55,14 +55,14 @@ export function Hero() {
             </div>
           </div>
           <div className="sc-hero-art-wrap flex justify-center min-[761px]:order-none order-first mx-auto max-w-[220px] min-[761px]:mx-0 min-[761px]:max-w-none">
-            <div className="sc-image-hover rounded-3xl">
+            <div className="sc-image-hover sc-hero-art rounded-3xl">
               <Image
                 src={logo}
                 alt="SharkCare Foundation logo"
                 width={320}
                 height={320}
                 draggable={false}
-                className="sc-hero-art h-auto w-[min(320px,70%)] rounded-3xl"
+                className="h-auto w-[min(320px,70%)] rounded-3xl"
                 priority
               />
             </div>
