@@ -7,12 +7,12 @@ const ACCENT_GREEN = "#1F8707";
 export function Hero() {
   return (
     <section
-      className="bg-[#000B3D] bg-[radial-gradient(ellipse_at_18%_20%,rgba(31,135,7,0.16),transparent_55%)]"
+      className="sc-hero w-full bg-[#000B3D] text-white"
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto max-w-[1180px] px-[clamp(20px,5vw,56px)] pt-[clamp(64px,10vw,120px)] pb-[clamp(72px,10vw,120px)]">
         <div className="sc-hero-grid grid grid-cols-1 items-center gap-[clamp(32px,6vw,64px)] min-[761px]:grid-cols-[1.1fr_0.9fr]">
-          <div className="flex flex-col gap-6">
+          <div className="relative z-10 flex flex-col gap-6">
             <span
               className="sc-hero-in text-[13px] font-bold uppercase tracking-[0.16em]"
               style={{ animationDelay: "0.05s", color: ACCENT_GREEN }}
@@ -54,15 +54,15 @@ export function Hero() {
               </Link>
             </div>
           </div>
-          <div className="sc-hero-art-wrap flex justify-center min-[761px]:order-none order-first mx-auto max-w-[220px] min-[761px]:mx-0 min-[761px]:max-w-none">
-            <div className="sc-image-hover sc-hero-art rounded-3xl">
+          <div className="sc-hero-art-wrap relative z-0 order-first flex w-full justify-center min-[761px]:order-none min-[761px]:w-auto">
+            <div className="sc-image-hover sc-hero-art mx-auto w-fit rounded-3xl">
               <Image
                 src={logo}
                 alt="SharkCare Foundation logo"
                 width={320}
                 height={320}
                 draggable={false}
-                className="h-auto w-[min(320px,70%)] rounded-3xl"
+                className="mx-auto block h-auto w-[min(220px,70vw)] rounded-3xl min-[761px]:w-[min(320px,70%)]"
                 priority
               />
             </div>

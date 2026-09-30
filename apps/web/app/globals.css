@@ -219,6 +219,28 @@
   }
 }
 
+.sc-hero {
+  background:
+    radial-gradient(
+      ellipse 90% 55% at 50% 82%,
+      rgba(31, 135, 7, 0.16),
+      transparent 55%
+    ),
+    #000b3d;
+}
+
+@media (min-width: 761px) {
+  .sc-hero {
+    background:
+      radial-gradient(
+        ellipse at 18% 20%,
+        rgba(31, 135, 7, 0.16),
+        transparent 55%
+      ),
+      #000b3d;
+  }
+}
+
 .sc-hero-in {
   animation: scFadeUp 0.9s ease both;
 }
