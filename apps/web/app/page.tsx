@@ -1,5 +1,9 @@
-"use client";
+import { Hero } from "@shared/components/home/Hero";
 
 export default function Home() {
-  return <h1> Hello World </h1>;
+  return (
+    <main className="flex flex-1 flex-col">
+      <Hero />
+    </main>
+  );
 }
