@@ -89,8 +89,8 @@ Copy [`.env.example`](.env.example) to `.env` at the repository root and fill in
 pnpm install
 
 # 2. Generate and apply database migrations
-pnpm --filter nestjs db:generate
-pnpm --filter nestjs db:migrate
+pnpm --filter api db:generate
+pnpm --filter api db:migrate
 
 # 3. Start all apps in watch mode
 pnpm dev
@@ -104,16 +104,16 @@ All commands are run from the `apps/api` package.
 
 ```bash
 # Generate migration files from schema changes
-pnpm --filter nestjs db:generate
+pnpm --filter api db:generate
 
 # Apply pending migrations
-pnpm --filter nestjs db:migrate
+pnpm --filter api db:migrate
 
 # Push schema directly to the database
-pnpm --filter nestjs db:push
+pnpm --filter api db:push
 
 # Open Drizzle Studio
-pnpm --filter nestjs db:studio
+pnpm --filter api db:studio
 ```
 
 ---
